@@ -78,7 +78,7 @@ class TableViewCell: UITableViewCell
             titleLabel.autoPinEdgeToSuperviewEdge(.Trailing, withInset: kLabelHorizontalInsets)
             
             // This constraint is an inequality so that if the cell is slightly taller than actually required, extra space will go here
-            bodyLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: titleLabel, withOffset: 0.0, relation: .Equal)
+            bodyLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: titleLabel, withOffset: 0.0, relation: .GreaterThanOrEqual)
             
             bodyLabel.autoPinEdgeToSuperviewEdge(.Leading, withInset: kLabelHorizontalInsets)
             bodyLabel.autoPinEdgeToSuperviewEdge(.Trailing, withInset: kLabelHorizontalInsets)
