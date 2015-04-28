@@ -47,6 +47,8 @@ class TableViewCell: UITableViewCell
         bodyLabel.textColor = UIColor.darkGrayColor()
         bodyLabel.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.1) // light red
         
+        self.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
         updateFonts()
         
         contentView.addSubview(titleLabel)
@@ -76,7 +78,7 @@ class TableViewCell: UITableViewCell
             titleLabel.autoPinEdgeToSuperviewEdge(.Trailing, withInset: kLabelHorizontalInsets)
             
             // This constraint is an inequality so that if the cell is slightly taller than actually required, extra space will go here
-            bodyLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: titleLabel, withOffset: 10.0, relation: .GreaterThanOrEqual)
+            bodyLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: titleLabel, withOffset: 0.0, relation: .Equal)
             
             bodyLabel.autoPinEdgeToSuperviewEdge(.Leading, withInset: kLabelHorizontalInsets)
             bodyLabel.autoPinEdgeToSuperviewEdge(.Trailing, withInset: kLabelHorizontalInsets)
